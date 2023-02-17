@@ -1,0 +1,56 @@
+.MOTD_Cont{
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    /* margin-left: 30px; */
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+.MOTD_Content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: absolute;
+    justify-content: flex-end;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.543);
+    backdrop-filter: blur(8px);
+}
+.MOTD_Title{
+    position: relative;
+    font-size: 40px;
+    margin-bottom: 10px;
+    z-index: 5;
+}
+.MOTD_MovieTitle{
+    font-size: 30px;
+    position: relative;
+    z-index: 5;
+}
+/* .blur{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+
+    
+    filter: blur(50px);
+    opacity: 0.4;
+} */
+.MOTD_Img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 1000px){
+
+}
+@media (max-width: 430px){
+    .MOTD_Content{
+        height: fit-content;
+        width: 100%;
+        bottom: 0;
+    }
+}

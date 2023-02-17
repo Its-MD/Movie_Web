@@ -1,0 +1,71 @@
+.AOTD_Container{
+    flex-grow: 1;
+    background-color: white;
+    margin-left: 30px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    color: #1b1b1b;
+}
+.AOTD_Content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.AOTD_Title{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.AOTD_ActorName{
+    font-size: 60px;
+}
+.AOTD_ActorRate{
+    font-size: 30px;
+    margin-top: auto;
+}
+.AOTD_Img{
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+@media (max-width: 1000px){
+    .AOTD_Container{
+        height: 400px;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .AOTD_Title{
+        font-size: 20px;
+    }
+    .AOTD_ActorName{
+        font-size: 30px;
+    }
+    .AOTD_ActorRate{
+        font-size: 25px;
+    }  
+    .AOTD_Img{
+        height: 90%;
+    }    
+}
+@media (max-width: 430px){
+    .AOTD_Container{
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+    .AOTD_Img{
+        margin: auto;
+    }
+    .AOTD_Content{
+        text-align: center;
+        margin-top: 10px;
+    }
+    .AOTD_Title{
+        margin-bottom: 5px;
+    }
+}
