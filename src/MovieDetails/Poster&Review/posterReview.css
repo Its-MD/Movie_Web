@@ -1,10 +1,28 @@
 .PRCont{
-    
+    display: flex;
+    width: 450px;
+    flex-shrink: 1;
+    flex-direction: column;
+    padding: 30px;
 }
 .moviePoster{
-
+    border-radius: 20px;
 }
-.rating{
-    margin: 10px;
+.rateCont{
+    margin-top: 20px;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progressBar{
+    width: 100px;
+    height: 100px;
+}
+.totalRateCont{
+    margin-left: 40px;
+    font-size: 20px;
+}
+.rateNum{
+    font-size: 30px;
 }

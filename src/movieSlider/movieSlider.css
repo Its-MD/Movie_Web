@@ -28,10 +28,16 @@
     /* flex-wrap: wrap; */
 }
 .slider_item{
+    display: flex;
     width: 500px;
     height: 100%;
     margin-right: 10px;
     flex-shrink: 0;
     font-size: 20px;
     font-weight: 800;
+}
+@media (max-width: 1000px){
+    .slider_item{
+
+    }
 }

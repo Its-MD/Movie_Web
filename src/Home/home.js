@@ -7,8 +7,11 @@ import Loader from '../Loader/loader';
 import MOTD from '../MovieOfTheDay/MOTD';
 import AOTD from'../ActorOfTheDay/AOTD';
 import MovieSlider from '../movieSlider/movieSlider';
+import { useNavigate } from 'react-router';
 
 const Home = ()=>{
+    const nav = useNavigate()
+
     const [genreItems, setGenreItems] = useState([
         {
             Title: "🍿 All",
@@ -67,6 +70,8 @@ const Home = ()=>{
 
     const [loading, setLoaidng] = useState(false);
 
+    const user = true;
+
     //adding neon class to selected category
     const classHandler = (active)=>{
         if(active) {return "genreContainer containerActive"}
@@ -94,7 +99,7 @@ const Home = ()=>{
     const isAllActive = genreItems[0].isActive;
 
     //useEffect function (hook) which is activated only after construct component template (all function including return and states)
-    //when dependency array item has changed useEffect activates. else no chnage in depen it'll pass
+    //when dependency array item has changed useEffect activates. else no change in depen it'll pass
     useEffect(()=>{
         setLoaidng(true);
         resultHandler(idHandler());
@@ -104,6 +109,9 @@ const Home = ()=>{
     }, [genreItems] // = dependency array
     )
 
+    if(!user){
+        nav("/signUp")
+    }
 
     // we return either Loader or the whole page depends if loading true or false
     return loading?<Loader/>:(

@@ -43,9 +43,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
 }
 @media (max-width: 1000px){
-
+    .MOTD_Content{
+        height: fit-content;
+        width: 100%;
+        bottom: 0;
+    }
 }
 @media (max-width: 430px){
     .MOTD_Content{

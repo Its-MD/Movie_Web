@@ -58,3 +58,21 @@ export const popularActorsRequest = async()=>{
     let data = response.json();
     return data;
 }
+
+export const specificMovieRequest = async(id)=>{
+    //creating the object where the data will be stored
+    const data = {}
+    let infoResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=145d735794b8c35cc77b1dd1a86ea0dd&language=en-US`)
+    //the condition (.ok) returns bool (true or false) if the response was successful or not
+    if(infoResponse.ok){
+        //we create a new key inside the object and put the response as it's value
+        data["info"] = await infoResponse.json()
+    }
+    let castRes = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=145d735794b8c35cc77b1dd1a86ea0dd&language=en-US`)
+    if(castRes.ok){
+        data["cast"] = await castRes.json()
+        return data
+    }
+    return null
+}
+//refactoring to promiseAll

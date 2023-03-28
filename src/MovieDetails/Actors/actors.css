@@ -1,24 +1,54 @@
-.movieActors{
-
+.movieActorsCont{
+    width: 450px;
+    flex-shrink: 1;
+    padding: 20px;
 }
 .actorsHeader{
-
+    font-size: 55px;
 }
 .actorsCont{
-
+    margin: 10px;
 }
 .actor_item{
-
+    display: flex;
+    margin-bottom: 20px;
 }
-.actorProfile{
-
+.imageWrapper{
+    border-radius: 40%;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+}
+.actorImg{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.actor_item_text{
+    margin: auto 10px;
 }
 .actorName{
-
+    font-size: 28px;
 }
 .actorRole{
-
+    font-size: 20px;
+    color: #C0C0C0;
 }
-.showAll{
-    
+.buttonWrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.showAllBtn{
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: #FF5409;
+    margin-right: 8px;
+}
+.showBtnIcon{
+    width: 30px;
+}
+.btnHide{
+    display: none;
 }

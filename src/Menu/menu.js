@@ -28,19 +28,19 @@ const Menu = ()=>{
             icon: Watching,
             isActive: false,
             route: "watchList"
-        },
-        {
-            title: "History",
-            icon: History,
-            isActive: false,
-            route: "history"
-        },
-        {
-            title: "Settings",
-            icon: Settings,
-            isActive: false,
-            route: "settings"
         }
+        // {
+        //     title: "History",
+        //     icon: History,
+        //     isActive: false,
+        //     route: "history"
+        // },
+        // {
+        //     title: "Settings",
+        //     icon: Settings,
+        //     isActive: false,
+        //     route: "settings"
+        // }
 
     ]);
 

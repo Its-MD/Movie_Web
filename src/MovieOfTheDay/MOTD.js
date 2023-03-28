@@ -33,12 +33,11 @@ const MOTD = ()=>{
             setImage(backdropHandler(result.backdrop_path))
         });
     }, [])
-    
     return(
         <div className="MOTD_Cont">
             <div className="MOTD_Content">
                 <h2 className="MOTD_Title">Movie Of The Day</h2>
-                <p className="MOTD_MovieTitle">{movie?.original_title}</p>
+                <p className="MOTD_MovieTitle">{movie?.title}</p>
             </div>
             <img src={image} className="MOTD_Img" />
         </div>

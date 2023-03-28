@@ -1,47 +1,89 @@
 .movieAllDetsCont{
-
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    padding-left: 10px;
 }
 .mainInfo{
-
+    
 }
-.movieTitle{
-
+.detailsTitle{
+    font-size: 70px;
+    margin-bottom: 10px;
 }
 .underTitleCont{
-
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 .year{
 
 }
 .buttonsCont{
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.detailsBtn{
+    padding: 25px; 
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
+.detailsBtn img{
+    width: 40px;
+}
+.trailer{
+    font-size: 25px;
+    background-color: #FF5409;
+    color: #F2F2F2;
+}
+.save{
+    margin-left: 20px;
+}
+.share{
 
 }
-.trailerBtn{
-
+.save, .share{
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid #fff;
 }
-.saveBtn{
-
+.detsDesc{
+    font-size: 20px;
+    min-height: 200px;
 }
-.shareBtn{
-
-}
-.movieDesc{
-
-}
-.specs{
+.specsCont{
 
 }
 .specHeader{
+    font-size: 40px;
+}
+.underlineItem{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.465);
+    padding: 10px 0;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+}
+.spec_genresCont{
 
 }
-.spec_genres{
+.spec_genre_title, .origin_title, .runtime_title{
+    width: 150px;
+}
+.spec_genre_title{
 
 }
 .spec_genres_item{
-
+    margin-right: 8px;
+    border: 2px solid #F2F2F2;
+    padding: 5px 20px;
+    border-radius: 30px;
 }
 .spec_origin{
 
+}
+.ULItem_value{
+    color: #C0C0C0;
 }
 .origin_title{
 
