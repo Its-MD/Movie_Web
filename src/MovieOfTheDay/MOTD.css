@@ -16,6 +16,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.543);
     backdrop-filter: blur(8px);
+    z-index: 10;
 }
 .MOTD_Title{
     position: relative;

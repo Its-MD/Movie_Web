@@ -1,0 +1,13 @@
+.profile{
+    background: #18181c;
+    color: #F2F2F2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 30px 0 130px;
+}
+.profileTitle{
+    font-size: 70px;
+    padding: 20px 0;
+}

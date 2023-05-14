@@ -8,7 +8,6 @@ const idSlice = createSlice({
     //reducer its simple function which gets 2 params (state and action) and return new state, it is necessary.
     reducers: {
         passId: (state, action)=>{
-
             return state = action.payload
         }
     }

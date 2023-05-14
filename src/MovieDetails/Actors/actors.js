@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './actors.css';
 import arrowIcon from './icons/rightArrowIconColor.png'
+import picUnavaliable from '../../movieCard/picUnavaliable.png'
 
 const Actors = ({data})=>{
     const [itemsOnPage, setItemsOnPage] = useState(4);
@@ -8,6 +9,16 @@ const Actors = ({data})=>{
     const btnStylesHandler = ()=>{
         return itemsOnPage==data.cast.cast.length?"buttonWrap btnHide": "buttonWrap"
     }
+
+    const profilePicHandler = (result)=>{
+        if (result == null){
+            return picUnavaliable
+        }
+        else{
+            return `http://image.tmdb.org/t/p/original${result}`
+        }
+    }
+
 
     return(
         <div className="movieActorsCont">
@@ -18,7 +29,7 @@ const Actors = ({data})=>{
                         return i<itemsOnPage?(
                         <div className="actor_item" key={i}>
                         <div className="imageWrapper">
-                            <img src={`http://image.tmdb.org/t/p/h632/${e.profile_path}`} className="actorImg"/>
+                            <img src={profilePicHandler(e.profile_path)} className="actorImg"/>
                         </div>
                         <div className="actor_item_text">
                             <p className="actorName">{e.name}</p>

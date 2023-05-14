@@ -35,9 +35,13 @@
     flex-shrink: 0;
     font-size: 20px;
     font-weight: 800;
+    flex-direction: column;
+    font-size: 23px;
 }
-@media (max-width: 1000px){
-    .slider_item{
-
+@media (max-width: 800px) {
+    .slider_container::-webkit-scrollbar-thumb{
+        background-color: #FF5409;
+        border-radius: 100px;
+        width: 50px;
     }
 }

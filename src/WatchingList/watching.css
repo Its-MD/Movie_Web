@@ -1,0 +1,49 @@
+.watchingContainer{
+    background: #18181c;
+    color: #F2F2F2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 30px 0 130px;
+}
+.watchingTitle{
+    font-size: 70px;
+    padding: 20px 0;
+}
+.allCardsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: #202026;
+    width: 380px;
+    height: fit-content;
+    border-radius: 10px;
+    font-size: 30px;
+    align-items: center;
+    position: relative;
+}
+.movieCardPoster{
+    width: 100%;
+    border-radius: 10px;
+}
+.cardInfo{
+    display: flex;
+    padding: 20px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.543);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    border-radius:  0 0 10px 10px;
+}
+.movieCardTitle{
+
+}
