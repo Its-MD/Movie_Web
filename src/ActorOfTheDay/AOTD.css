@@ -34,6 +34,10 @@
     border-radius: 30px;
     object-fit: cover;
 }
+.AOTDLight{
+    background-color: #18181c;
+    color: #F2F2F2;
+}
 @media (max-width: 1000px){
     .AOTD_Container{
         height: 400px;

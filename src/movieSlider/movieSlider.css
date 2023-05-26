@@ -12,8 +12,9 @@
     overflow-y: hidden;
 }
 .slider_container::-webkit-scrollbar{
-    background-color: #18181c;
+    background-color: #121215;
     height: 30px;
+    border-radius: 100px;
 }
 .slider_container::-webkit-scrollbar-thumb{
     background-color: #FF5409;
@@ -37,6 +38,11 @@
     font-weight: 800;
     flex-direction: column;
     font-size: 23px;
+}
+/*Light theme style*/
+
+.lightSlider .slider_container::-webkit-scrollbar{
+    background-color: #e0e0e0;
 }
 @media (max-width: 800px) {
     .slider_container::-webkit-scrollbar-thumb{

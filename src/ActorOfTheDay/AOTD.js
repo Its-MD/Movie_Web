@@ -2,10 +2,13 @@ import { popularActorsRequest } from "../Requests/requests";
 import { useEffect, useState } from "react";
 import "./AOTD.css";
 import picUnavaliable from "../movieCard/picUnavaliable.png";
+import { useSelector } from "react-redux";
 
 const AOTD = () => {
   const [actor, setActor] = useState();
   const [image, setImage] = useState();
+
+  const isLight = useSelector((state) => state.theme);
 
   const backdropHandler = (result) => {
     if (result == null) {
@@ -24,7 +27,7 @@ const AOTD = () => {
   }, []);
 
   return (
-    <div className="AOTD_Container">
+    <div className={`AOTD_Container ${isLight ? "AOTDLight" : ""}`}>
       <div className="AOTD_Content">
         <h2 className="AOTD_Title">Actor Of The Day</h2>
         <p className="AOTD_ActorName">{actor?.name}</p>

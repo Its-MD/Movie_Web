@@ -1,50 +1,54 @@
 import { useState } from "react";
 import "./menu.css";
-import Home from "./icons/Home.png";
-import Profile from "./icons/Profile.png";
-import Watching from "./icons/Watching.png";
-import History from "./icons/History.png";
-import Settings from "./icons/Settings.png";
-import SignOut from "./icons/SignOut.svg";
-import Theme from "./icons/Theme.png";
+
+import LightHouse from "./icons/DarkTheme_LightIcons/House.svg";
+import LightLogout from "./icons/DarkTheme_LightIcons/Logout.svg";
+import LightProfile from "./icons/DarkTheme_LightIcons/Profile.svg";
+import LightTheme from "./icons/DarkTheme_LightIcons/Theme.svg";
+import LightWatch from "./icons/DarkTheme_LightIcons/WatchList.svg";
+
+import DarkHouse from "./icons/LightTheme_DarkIcons/House.svg";
+import DarkLogout from "./icons/LightTheme_DarkIcons/Logout.svg";
+import DarkProfile from "./icons/LightTheme_DarkIcons/Profile.svg";
+import DarkTheme from "./icons/LightTheme_DarkIcons/Theme.svg";
+import DarkWatch from "./icons/LightTheme_DarkIcons/WatchList.svg";
+
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { removeUser } from "../Redux/userSlice";
 import { signOut } from "firebase/auth";
 import { auth } from "../Firebase/config";
+import { toggleTheme } from "../Redux/themeSlice";
 
 const Menu = () => {
   const [navItems, setNavItems] = useState([
     {
       title: "Home",
-      icon: Home,
+      icon: {
+        light: LightHouse,
+        dark: DarkHouse,
+      },
       isActive: true,
       route: "/",
     },
     {
       title: "Profile",
-      icon: Profile,
+      icon: {
+        light: LightProfile,
+        dark: DarkProfile,
+      },
       isActive: false,
       route: "profile",
     },
     {
       title: "My Watching List",
-      icon: Watching,
+      icon: {
+        light: LightWatch,
+        dark: DarkWatch,
+      },
       isActive: false,
       route: "watchList",
     },
-    // {
-    //     title: "History",
-    //     icon: History,
-    //     isActive: false,
-    //     route: "history"
-    // },
-    // {
-    //     title: "Settings",
-    //     icon: Settings,
-    //     isActive: false,
-    //     route: "settings"
-    // }
   ]);
 
   const classHandler = (active) => {
@@ -55,9 +59,10 @@ const Menu = () => {
     }
   };
   const dispatch = useDispatch();
+  const isLight = useSelector((state) => state.theme);
 
   return (
-    <div className="menu">
+    <div className={`menu ${isLight ? "lightMenu" : ""}`}>
       {navItems.map((e, i) => {
         return (
           <Link
@@ -72,13 +77,18 @@ const Menu = () => {
               setNavItems(disabled);
             }}
           >
-            <img src={e.icon} alt="" className="menuItemIcon" />
+            <img src={e.icon.light} alt="" className="menuItemIcon" />
             <p className="menuItemTitle">{e.title}</p>
           </Link>
         );
       })}
-      <div className="menuItem menuBtns divider">
-        <img src={Theme} alt="" className="menuItemIcon" />
+      <div
+        className="menuItem menuBtns divider"
+        onClick={() => {
+          dispatch(toggleTheme());
+        }}
+      >
+        <img src={LightTheme} alt="" className="menuItemIcon" />
         <p className="menuItemTitle">Theme</p>
       </div>
       <div
@@ -94,7 +104,7 @@ const Menu = () => {
             });
         }}
       >
-        <img src={SignOut} alt="" className="menuItemIcon" />
+        <img src={LightLogout} alt="" className="menuItemIcon" />
         <p className="menuItemTitle">Sign Out</p>
       </div>
     </div>

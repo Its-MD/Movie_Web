@@ -19,7 +19,6 @@
 .cardContainer{
     display: flex;
     flex-direction: column;
-    background-color: #202026;
     width: 380px;
     height: fit-content;
     border-radius: 10px;
@@ -31,13 +30,22 @@
     width: 100%;
     border-radius: 10px;
 }
+.cardContainer:hover .trashIcon{
+    transform: translateY(-60px);
+}
+.trashIcon{
+    position: absolute;
+    bottom: 30px;
+    right: 25px;
+    transition: transform 0.4s;
+    width: 40px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
 .cardInfo{
+    z-index: 20;
+    background: #18181c;
     display: flex;
     padding: 20px;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.543);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
     z-index: 10;
     bottom: 0;
     width: 100%;
@@ -45,5 +53,19 @@
     border-radius:  0 0 10px 10px;
 }
 .movieCardTitle{
+    line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 400px;
+}
+/*Light theme style*/
+
+.lightWatch{
+    background: #F2F2F2;
+    color: #18181c;
+}
+.lightWatch .cardInfo{
+    background: #F2F2F2;
 
 }

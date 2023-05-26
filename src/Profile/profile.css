@@ -11,3 +11,9 @@
     font-size: 70px;
     padding: 20px 0;
 }
+/*Light theme style*/
+
+.lightProfile{
+    background: #F2F2F2;
+    color: #18181c;
+}

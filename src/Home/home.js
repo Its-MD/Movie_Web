@@ -81,9 +81,12 @@ const Home = () => {
 
   const userData = useSelector((state) => state.user);
   const loading = useSelector((state) => state.loading);
+  const isLight = useSelector((state) => state.theme);
   const dispatch = useDispatch();
 
   const isAuth = userData.isAuth;
+
+  // console.log(loading.loading);
 
   //adding neon class to selected category
   const classHandler = (active) => {
@@ -122,7 +125,7 @@ const Home = () => {
       resultHandler(idHandler());
       setTimeout(() => {
         dispatch(removeLoading());
-      }, 1000);
+      }, 1500);
     },
     [genreItems] // = dependency array
   );
@@ -144,13 +147,11 @@ const Home = () => {
     });
   }, []);
 
-  console.log(MOTDData);
-
   // we return either Loader or the whole page depends if loading true or false
   return loading.loading ? (
     <Loader />
   ) : (
-    <div className="home">
+    <div className={`home ${isLight ? "lightHome" : ""}`}>
       <h1 className="homeTitle">My Cinema</h1>
       <div className="genrePicker">
         {

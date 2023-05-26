@@ -7,6 +7,7 @@ import { useNavigate, useNavigation, useParams } from "react-router";
 import { useSelector } from "react-redux";
 import { specificMovieRequest } from "../../Requests/requests";
 import picUnavaliable from "../../movieCard/picUnavaliable.png";
+import Back from "./backBtn.png";
 
 const MainMD = () => {
   // useSelector returns state or part of state
@@ -42,6 +43,14 @@ const MainMD = () => {
 
   return (
     <div className="movieDetailsBg">
+      <img
+        src={Back}
+        alt=""
+        className="goBackbtn"
+        onClick={() => {
+          nav(-1);
+        }}
+      />
       <div className="movieDetailsBackdrop">
         <img src={backdropHandler(requestData.info.backdrop_path)} alt="" />
         <div className="gradient"></div>

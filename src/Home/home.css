@@ -46,11 +46,21 @@
     border-radius: 20px;
     width: fit-content;
     font-size: 20px;
-    color: white;
+    color: #F2F2F2;
     align-self: center;
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
+/*Light theme style*/
+.lightHome{
+    background: #F2F2F2;
+    color: #18181c;
+}
+.lightHome .genreContainer{
+    background: #e0e0e0;
+}
+
 @media (max-width: 1000px){
     .homeTitle{
         font-size: 50px;

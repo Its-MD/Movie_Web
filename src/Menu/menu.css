@@ -9,8 +9,8 @@
     height: 100vh;
     padding: 20px;
     width: 100px;
-    transition: width 0.3s;
     z-index: 1000;
+    transition: background 0.3s, color 0.3s, width 0.3s;
 }
 .menuItem{
     display: flex;
@@ -34,7 +34,7 @@
     object-fit: contain;
     height: 50px;
     width: 50px;
-    background-color: #1F1F25;
+    background: #1F1F25;
 }
 .menu:hover{
     width: 300px;
@@ -43,6 +43,7 @@
     transform: translateX(0);
     width: fit-content;
 }
+
 .menuItemTitle{
     margin-left: 10px;
     overflow: hidden;
@@ -54,6 +55,19 @@
 .divider{
     margin-top: auto;
 }
+/*Light theme style*/
+
+/* .lightMenu{
+    background: #e0e0e0;
+}
+.lightMenu .menuItem{
+    color: #1F1F25;
+}
+.lightMenu .menuItemIcon{
+    background: #1f1f1f !important;
+    filter: invert(1);
+} */
+
 @media (max-width: 430px){
     .menu{
         width: 100%;
